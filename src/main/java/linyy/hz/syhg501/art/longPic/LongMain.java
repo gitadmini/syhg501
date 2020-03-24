@@ -17,14 +17,12 @@ import javax.swing.JPanel;
 //把一个文件夹下的图片合并成为一张很长的图片
 public class LongMain {
 
+    final static String filePath = "C:\\Users\\45793\\Pictures\\网络图片\\"; // 原始图片所在目录
+
     public static void main(String[] args) throws IOException {
         JPanel jPanel = new JPanel();
         List<File> list = new ArrayList<File>();
-        File files = new File("src/main/java/linyy/hz/syhg501/art/longPic/in"); // 文件夾
-        File out = new File(
-            "E:\\eclipse\\work\\syhg501\\src\\main\\java\\linyy\\hz\\syhg501\\art\\longPic\\out\\"
-                    + new Date().getTime() + ".png");
-        FileOutputStream fos = new FileOutputStream(out);
+        File files = new File(filePath); // 文件夾
         int height = 0;
         int allHeight = 0, allWidth = 0;
         for (File file : files.listFiles()) {
@@ -35,6 +33,8 @@ public class LongMain {
             }
             list.add(file);
         }
+        File out = new File(filePath + new Date().getTime() + ".png");
+        FileOutputStream fos = new FileOutputStream(out);
         BufferedImage bufferedImage = new BufferedImage(allWidth, allHeight,
             BufferedImage.TYPE_INT_ARGB);
         Graphics2D g = bufferedImage.createGraphics();
