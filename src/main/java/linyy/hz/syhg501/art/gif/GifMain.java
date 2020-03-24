@@ -12,10 +12,13 @@ import java.util.List;
 import javax.imageio.ImageIO;
 
 public class GifMain {
+
+    final static String filePath = "C:\\Users\\45793\\Pictures\\网络图片\\"; // 原始图片所在目录
+
     public static void main(String[] args) throws IOException {
         List<File> list = new ArrayList<File>();
-        File files = new File("f:\\temp"); // 文件夾
-        File out = new File("f:\\temp\\" + new Date().getTime() + ".gif");
+        File files = new File(filePath);
+        File out = new File(filePath + new Date().getTime() + ".gif");
         for (File file : files.listFiles()) {
             list.add(file);
         }
