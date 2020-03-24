@@ -10,7 +10,7 @@ package linyy.hz.syhg501.art.word;
  */
 public class ArtCommon {
 
-    public static final String PATH = "src/main/java/linyy/hz/syhg501/art/word/pic/";
+    public static final String PATH = "C:\\Users\\45793\\Pictures\\网络图片\\";
 
     public static final String ORIGINAL = PATH + "1.jpg";
 
